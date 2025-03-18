@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="fade-in">My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="slide-in">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Hello! I'm  NIRANJAN a Web Developer passionate about creating interactive websites.</p>
+    </section>
+
+    <section id="about" class="slide-in">
+        <h2>About Me</h2>
+        <p>I am a web developer specializing in front-end technologies like HTML, CSS, and <u> learning</u> javascript</p>
+    </section>
+
+    <section id="projects" class="slide-in">
+        <h2>Projects</h2>
+        <div class="project hover-effect">
+            <h3>Project 1</h3>
+            <p>......</p>
+        </div>
+        <div class="project hover-effect">
+            <h3>Project 2</h3>
+            <p>.......</p>
+        </div>
+    </section>
+
+    <section id="contact" class="slide-in">
+        <h2>Contact Me</h2>
+        <p>Email: niranjan8903532@gmail.com</p>
+    </section>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #333;
+    text-align: center;
+    overflow-x: hidden; 
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(158, 82, 82);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+section {
+    padding: 50px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+.project {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    </style>
+
+</body>
+</html>
